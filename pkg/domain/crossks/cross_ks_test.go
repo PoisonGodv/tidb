@@ -22,6 +22,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvproto/pkg/keyspacepb"
+	_ "github.com/pingcap/tidb/pkg/autoid_service" // Initialize the source mockstore's auto-ID service.
 	"github.com/pingcap/tidb/pkg/config"
 	"github.com/pingcap/tidb/pkg/config/kerneltype"
 	"github.com/pingcap/tidb/pkg/ddl/serverstate"

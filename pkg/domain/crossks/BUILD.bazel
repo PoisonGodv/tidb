@@ -29,6 +29,7 @@ go_library(
         "//pkg/keyspace",
         "//pkg/kv",
         "//pkg/meta",
+        "//pkg/meta/autoid",
         "//pkg/meta/model",
         "//pkg/session/sessmgr",
         "//pkg/sessionctx",
@@ -63,6 +64,7 @@ go_test(
     flaky = True,
     shard_count = 9,
     deps = [
+        "//pkg/autoid_service",
         "//pkg/config",
         "//pkg/config/kerneltype",
         "//pkg/ddl/schemaver",
@@ -78,6 +80,7 @@ go_test(
         "//pkg/keyspace",
         "//pkg/kv",
         "//pkg/meta",
+        "//pkg/meta/autoid",
         "//pkg/meta/metadef",
         "//pkg/meta/model",
         "//pkg/parser/ast",
