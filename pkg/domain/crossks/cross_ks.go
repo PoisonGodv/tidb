@@ -276,7 +276,7 @@ func (*Manager) createSessionManager(
 			return 0
 		},
 		etcdCli,
-		&minStartTSReporter{},
+		&minStartTSReporter{coordinator: coordinator, etcdCli: etcdCli, serverID: virtualSvrID},
 		ks,
 	)
 	if err = svrInfoSyncer.NewSessionAndStoreServerInfo(ctx); err != nil {

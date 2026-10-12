@@ -481,6 +481,7 @@ func TestDomainAcquireKSRuntimeHandle(t *testing.T) {
 	require.True(t, ok)
 	require.Same(t, sessMgr.Store(), handle.Store())
 	require.Same(t, sessMgr.SysSessionPool(), handle.SysSessionPool())
+
 }
 
 func TestDomainAlterTableModeInKeyspaceSubmitOnly(t *testing.T) {
